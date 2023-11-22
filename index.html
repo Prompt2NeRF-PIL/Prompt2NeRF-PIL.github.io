@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Prompt2NeRF-PIL: Fast NeRF Generation via Pretrained Implicit Latent</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -58,7 +58,7 @@
       </span>
       </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More Research
         </a>
@@ -76,7 +76,7 @@
             PhotoShape
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
 
   </div>
@@ -88,9 +88,11 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Prompt2NeRF-PIL: Fast NeRF Generation via Pretrained Implicit Latent</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
+              <a href="#">Anonymous CVPR Submission</a></span>
+            <!-- <span class="author-block">
               <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
@@ -108,13 +110,13 @@
             </span>
             <span class="author-block">
               <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+            </span> -->
           </div>
 
-          <div class="is-size-5 publication-authors">
+          <!-- <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Washington,</span>
             <span class="author-block"><sup>2</sup>Google Research</span>
-          </div>
+          </div> -->
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -258,10 +260,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            This paper explores promptable NeRF generation (e.g., text prompt or single image prompt)
+            for direct conditioning and fast generation of NeRF parameters for the underlying 3D scenes, 
+            thus undoing complex intermediate steps while providing full 3D generation with conditional control. 
+            Unlike previous diffusion-CLIP-based pipelines that involve tedious per-prompt optimizations, 
+            Prompt2NeRF-PIL is capable of generating a variety of 3D objects with a single forward pass, 
+            leveraging a pre-trained implicit latent space of NeRF parameters. Furthermore, in zero-shot tasks, 
+            our experiments demonstrate that the NeRFs produced by our method serve as semantically informative initializations, 
+            significantly accelerating the inference process of existing prompt-to-NeRF methods. 
+            Specifically, we will show that our approach speeds up the text-to-NeRF model DreamFusion and the 
+            3D reconstruction speed of the image-to-NeRF method Zero-1-to-3 by 3 to 5 times.
           </p>
-          <p>
+          <!-- <p>
             Our approach augments neural radiance fields
             (NeRF) by optimizing an
             additional continuous volumetric deformation field that warps each observed point into a
@@ -283,7 +293,7 @@
             images of the same pose at different viewpoints. We show that our method faithfully
             reconstructs non-rigidly deforming scenes and reproduces unseen views with high
             fidelity.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
