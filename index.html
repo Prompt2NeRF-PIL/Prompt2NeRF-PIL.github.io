@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Prompt2NeRF-PIL: Fast NeRF Generation via Pretrained Implicit Latent">
+  <meta name="keywords" content="NeRF, 3D generation, text to NeRF, image to NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prompt2NeRF-PIL: Fast NeRF Generation via Pretrained Implicit Latent</title>
 
@@ -32,7 +32,6 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -52,7 +51,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="#">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -90,25 +89,36 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Prompt2NeRF-PIL: Fast NeRF Generation via Pretrained Implicit Latent</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
+            <!-- <span class="author-block"> -->
 <!--               <a href="#">Anonymous CVPR Submission</a></span>  -->
-            <span class="author-block">
+            <!-- <span class="author-block">
               <a href="https://google.com">Jianmeng Liu</a><sup>*</sup>,</span>
             <span class="author-block">
               <a href="https://google.com">Yuyao Zhang</a><sup>*</sup>,</span>
             <span class="author-block">
-              <a href="https://google.com">Zeyuan Meng</a><sup>*</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://google.com">Chi Keung Tang</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://google.com">Yu-wing Tai</a>,
-            </span>
+              <a href="https://google.com">Zeyuan Meng</a><sup>*</sup>,</span> -->
+              <span class="author-block">
+                Jianmeng LIU<sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                Yuyao ZHANG<sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                Zeyuan MENG<sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://yuwingtai.github.io/">Yu-Wing TAI</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://cse.hkust.edu.hk/~cktang/bio.html">Chi-Keung TANG</a><sup>1</sup>,
+              </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>*</sup>Co-first authors, ranked by alphabetical order of first names</span>
+            <span class="author-block"><sup>*</sup>equal contribution</span>
+            <br/>
+            <span class="author-block"><sup>1</sup>the Hong Kong University of Science and Technology, </span>
+            <span class="author-block"><sup>2</sup>Dartmouth College</span>
           </div>
 
           <div class="column has-text-centered">
@@ -191,7 +201,10 @@
     <div class="hero-body">
       <img src="images/Pipeline_new.png", alt="pipeline">
       <h2 class="subtitle has-text-centered">
-        pipeline of <b>Prompt2NeRF-PIL</b>
+        <b>Prompt2NeRF-PIL</b>'s overall pipeline, which accepts a textual or image input with a single forward pass during inference. Two
+main modules are shown: a semantic alignment transformer model that maps CLIP embeddings input to a pretrained implicit latent NeRF
+space, and then a VAE decoder transforms it into a parameter space representing a NeRF network that can either be directly rendered or
+serve as a good initialization used in prior text-to-NeRF works such as DreamFusion and image-to-3D works such as Zero-1-to-3 to drastically reduce their generation time
       </h2>
     </div>
   </div>
@@ -471,7 +484,7 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./our_paper.pdf">
+         href="#">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://github.com/Prompt2NeRF-PIL" class="external-link" disabled>
@@ -482,13 +495,16 @@
       <div class="column is-8">
         <div class="content">
           <p>
+            Contributor of this GitHub page: Zeyuan Meng, Jianmeng Liu, Yuyao Zhang
+          </p>
+          <p>
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
             This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+              href="https://github.com/Prompt2NeRF-PIL">source code</a> of this website,
             we just ask that you link back to this page in the footer.
             Please remember to remove the analytics code included in the header of the website which
             you do not want on your website.
